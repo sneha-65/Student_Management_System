@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Student Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<nav>
+
+    <h2>
+        🎓 Student ERP
+    </h2>
+
+    <ul>
+
+        <li>Dashboard</li>
+
+        <li>Students</li>
+
+        <li>Courses</li>
+
+        <li>Enrollments</li>
+
+        <li>Reports</li>
+
+    </ul>
+
+</nav>
+
+<body>
+    
+    <div class="container">
+
+        <h1>Student Management System</h1>
+
+        <!-- Dashboard -->
+
+        <div class="dashboard">
+
+        <div class="card">
+
+            <h2 id="studentCount">0</h2>
+
+            <p>Total Students</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2 id="courseCount">0</h2>
+
+            <p>Total Courses</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2 id="enrollmentCount">0</h2>
+
+            <p>Enrollments</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2 id="departmentCount">0</h2>
+
+            <p>Departments</p>
+
+        </div>
+
+    </div>
+        <!-- Add Student -->
+
+        <div class="form-box">
+
+            <h2>Add Student</h2>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Student Name">
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Email">
+
+            <input
+                type="text"
+                id="phone"
+                placeholder="Phone">
+
+            <input
+                type="text"
+                id="department"
+                placeholder="Department">
+
+            <button onclick="addStudent()">
+                Add Student
+            </button>
+
+        </div>
+
+        <div class="form-box">
+
+            <h2>Add Course</h2>
+
+            <input
+                type="text"
+                id="courseName"
+                placeholder="Course Name">
+
+            <input
+                type="number"
+                id="credits"
+                placeholder="Credits">
+
+            <button onclick="addCourse()">
+                Add Course
+            </button>
+
+        </div>
+        <div class="form-box">
+
+            <h2>Enroll Student</h2>
+
+            <input
+                type="number"
+                id="studentID"
+                placeholder="Student ID">
+
+            <input
+                type="number"
+                id="courseID"
+                placeholder="Course ID">
+
+            <button onclick="enrollStudent()">
+                Enroll
+            </button>
+
+        </div>
+
+        <!-- Search -->
+
+        <input
+        id="search"
+        class="search-box"
+        placeholder="Search Students..."
+        onkeyup="searchStudent()">
+
+        <!-- Student Table -->
+        <h2>🏫 Department Report</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Department</th>
+
+                    <th>Total Students</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="departmentTable">
+
+            </tbody>
+
+        </table>
+        <h2>📚 Course Report</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Course</th>
+
+                    <th>Students Enrolled</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="courseReportTable">
+
+            </tbody>
+
+        </table>
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Department</th>
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="studentTable">
+
+            </tbody>
+
+        </table>
+        <h2>Courses</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>Course Name</th>
+                    <th>Credits</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="courseTable">
+
+            </tbody>
+
+        </table>
+        <h2>Student Course Report</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Student</th>
+                    <th>Course</th>
+                    <th>Enrollment Date</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="enrollmentTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
